@@ -1,10 +1,6 @@
 <template>
     <div class="resource-bar" @click="toggleDetails">
       <span>Resources: {{ resources }}</span>
-      <div v-if="showDetails" class="details">
-        <!-- Add detailed resource information here -->
-        <p>More detailed resource info...</p>
-      </div>
     </div>
   </template>
   
@@ -22,10 +18,23 @@
       ...mapGetters(['resources'])
     },
     methods: {
-      toggleDetails() {
-        this.showDetails = !this.showDetails;
-      }
     }
   };
   </script>
   
+  <style scoped>
+  .resource-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #838383;
+    color: rgb(0, 0, 0);
+    height: 5%;
+    width: 100%;
+  }
+  .resource-bar button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  </style>

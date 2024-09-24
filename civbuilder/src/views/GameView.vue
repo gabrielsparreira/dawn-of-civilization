@@ -1,18 +1,16 @@
 <template>
     <div class="game-view">
       <HeaderComponent @open-settings="openSettings" />
-      <ResourceBar />
-      
-      <LeftBar @toggle-left-menu="toggleLeftMenu" />
-      <RightBar @toggle-right-menu="toggleRightMenu" />
-      
-      <LeftMenu :visible="isLeftMenuVisible" />
-      <RightMenu :visible="isRightMenuVisible" />
-      
-      <main class="main-content">
-        <GatherButton />
-      </main>
-      
+      <div class="game-content">
+        <ResourceBar />
+        <LeftBar @toggle-left-menu="toggleLeftMenu" />
+        <LeftMenu :visible="isLeftMenuVisible" />
+        <main class="main-content">
+            <GatherButton />
+        </main>
+        <RightMenu :visible="isRightMenuVisible" />
+        <RightBar @toggle-right-menu="toggleRightMenu" />
+      </div>      
       <FooterComponent />
       
       <!-- Settings Modal (optional) -->
@@ -80,14 +78,19 @@
     width: 100vw;
     overflow: hidden;
   }
+
+  .game-content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
   
   .main-content {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50px; /* Width of the left bar */
-    margin-right: 50px; /* Width of the right bar */
+    flex-grow: 4;
   }
   
   .modal {
@@ -96,7 +99,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.75);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +116,7 @@
     right: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: aliceblue;
   }
   </style>
   

@@ -25,6 +25,7 @@
     padding: 10px 20px;
     background-color: #2c3e50;
     color: white;
+    height: 10%;
   }
   .header-component button {
     padding: 5px 10px;

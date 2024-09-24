@@ -22,7 +22,7 @@
   
   <style scoped>
   .gather-container {
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     align-items: center;
   }

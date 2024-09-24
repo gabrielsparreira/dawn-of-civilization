@@ -26,11 +26,8 @@
   
   <style scoped>
   .right-menu {
-    position: fixed;
-    right: 50px; /* Width of the right bar */
-    top: 60px;
-    bottom: 40px;
-    width: 200px;
+    display: flex;
+    width: 20%;
     background-color: #34495e;
     color: white;
     padding: 20px;

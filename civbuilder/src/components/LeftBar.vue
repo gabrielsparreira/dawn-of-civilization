@@ -1,5 +1,5 @@
 <template>
-    <div class="side-bar left-bar">
+    <div class="side-bar">
       <button @click="toggleMenu">☰</button>
     </div>
   </template>
@@ -17,18 +17,14 @@
   
   <style scoped>
   .side-bar {
-    width: 50px;
-    background-color: #2c3e50;
     display: flex;
+    width: 10%;
+    background-color: #2c3e50;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 60px; /* Height of the header + resource bar */
-    bottom: 40px; /* Height of the footer */
+    height: 100%;
   }
-  .left-bar {
-    left: 0;
-  }
+
   .side-bar button {
     background: none;
     border: none;
